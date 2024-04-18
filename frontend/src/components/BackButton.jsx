@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
 
-const BackButton = () => {
-  return <div>BackButton</div>;
+// eslint-disable-next-line react/prop-types
+const BackButton = ({destination = '/' }) => {
+  return <div className="flex">
+    <Link 
+    to={destination}
+    className="bg-sky-800 text-white px-4 rounded-lg min-w-fit">
+        <BsArrowLeft className="text-2xl"/>
+    </Link>
+  </div>;
 };
 
 export default BackButton;
